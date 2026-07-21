@@ -11,7 +11,7 @@ import Lenis from "lenis";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight, Mail, MapPin, PlayCircle, Rocket } from "lucide-react";
-import { LabHero } from "./lab/LabHero";
+import { LabSite } from "./lab/LabSite";
 
 const EMAIL = "mansellasimone24@gmail.com";
 const GITHUB_URL = "https://github.com/XenoTech-Portfolio";
@@ -1169,8 +1169,8 @@ export default function App() {
   // ogni frame dentro MountainBackground.
   const starPulseRef = useRef(1);
 
-  // Prototipo del nuovo hero: pagina intera a sé, niente chrome esistente.
-  if (onLab) return <LabHero />;
+  // Prototipo della nuova landing: pagina intera a sé, niente chrome esistente.
+  if (onLab) return <LabSite />;
 
   return (
     <div className="min-h-screen">

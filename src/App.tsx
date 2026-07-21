@@ -13,7 +13,7 @@ import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight, Mail, MapPin, PlayCircle, Rocket } from "lucide-react";
 
 const EMAIL = "mansellasimone24@gmail.com";
-const GITHUB_URL = "https://github.com/mansellasimone24-a11y";
+const GITHUB_URL = "https://github.com/XenoTech-Portfolio";
 const INK = "#221f1b";
 const GOLD = "#b8862b"; // unico accento, colori originali del logo
 

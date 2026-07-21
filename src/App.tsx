@@ -1023,6 +1023,10 @@ function RevuPage() {
 /* ---------- Pagina Lavagna Tattica: sottopagina dedicata, demo live in iframe ---------- */
 
 function LavagnaTatticaPage() {
+  // L'iframe carica un secondo motore 3D (Three.js) sopra allo sfondo 3D
+  // della pagina: caricarlo subito appesantisce i dispositivi deboli, quindi
+  // parte solo al click dell'utente ("click-to-load").
+  const [demoAvviata, setDemoAvviata] = useState(false);
   return (
     <main className="mx-auto max-w-6xl px-5">
       <section className="py-14 md:py-20">
@@ -1059,13 +1063,33 @@ function LavagnaTatticaPage() {
               Apri a schermo intero <ArrowUpRight className="h-3.5 w-3.5" />
             </a>
           </div>
-          <iframe
-            src={LAVAGNA_TATTICA_URL}
-            title="Lavagna Tattica Pro — demo live"
-            className="h-[65vh] w-full rounded-md border-0"
-            loading="lazy"
-            allow="fullscreen"
-          />
+          {demoAvviata ? (
+            <iframe
+              src={LAVAGNA_TATTICA_URL}
+              title="Lavagna Tattica Pro — demo live"
+              className="h-[65vh] w-full rounded-md border-0"
+              allow="fullscreen"
+            />
+          ) : (
+            <button
+              type="button"
+              onClick={() => setDemoAvviata(true)}
+              className="group flex h-[65vh] w-full flex-col items-center justify-center gap-4 rounded-md border border-dashed text-center transition-colors"
+              style={{ borderColor: "rgba(34, 31, 27, 0.25)" }}
+            >
+              <span
+                className="flex h-16 w-16 items-center justify-center rounded-full transition-transform group-hover:scale-110"
+                style={{ backgroundColor: GOLD, color: "#fff" }}
+              >
+                <PlayCircle className="h-8 w-8" />
+              </span>
+              <span className="font-display text-lg font-bold">Avvia la demo 3D</span>
+              <span className="max-w-xs text-sm opacity-60">
+                Carica lo stadio interattivo qui nella pagina. Richiede qualche
+                secondo e un po' di GPU.
+              </span>
+            </button>
+          )}
         </Panel3D>
 
         <div className="grid gap-8 md:grid-cols-3">

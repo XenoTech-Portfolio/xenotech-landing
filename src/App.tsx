@@ -11,6 +11,7 @@ import Lenis from "lenis";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowUpRight, Mail, MapPin, PlayCircle, Rocket } from "lucide-react";
+import { LabHero } from "./lab/LabHero";
 
 const EMAIL = "mansellasimone24@gmail.com";
 const GITHUB_URL = "https://github.com/XenoTech-Portfolio";
@@ -1155,6 +1156,9 @@ export default function App() {
   const onRevu = route === "/revu";
   const onLavagnaTattica = route === "/lavagna-tattica";
   const onSubpage = onAutomazioni || onRevu || onLavagnaTattica;
+  // Rotta nascosta: prototipo del nuovo hero 3D (redesign in corso).
+  // Bypassa header/footer/sfondo montagna, occupa tutta la pagina.
+  const onLab = route === "/lab";
   useSmoothScroll();
   useReveal(route);
   const activeSection = useActiveSection(
@@ -1164,6 +1168,9 @@ export default function App() {
   // l'hover del progetto in evidenza scrivono sullo stesso ref, letto
   // ogni frame dentro MountainBackground.
   const starPulseRef = useRef(1);
+
+  // Prototipo del nuovo hero: pagina intera a sé, niente chrome esistente.
+  if (onLab) return <LabHero />;
 
   return (
     <div className="min-h-screen">

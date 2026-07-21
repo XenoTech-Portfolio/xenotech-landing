@@ -1,0 +1,36 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="72%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#161428"/>
+      <stop offset="100%" stop-color="#07070c"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7c274"/>
+      <stop offset="100%" stop-color="#b8862b"/>
+    </linearGradient>
+    <linearGradient id="pyr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#e7c274"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Piramide wireframe (nod al brand) -->
+  <g transform="translate(880,315)" opacity="0.92">
+    <polygon points="0,-150 170,150 -170,150" fill="none" stroke="url(#pyr)" stroke-width="3"/>
+    <polygon points="0,-150 60,150 -60,150" fill="none" stroke="url(#pyr)" stroke-width="1.6" opacity="0.7"/>
+    <line x1="-170" y1="150" x2="170" y2="150" stroke="url(#pyr)" stroke-width="1.6" opacity="0.5"/>
+    <circle cx="0" cy="-150" r="9" fill="#e7c274"/>
+    <circle cx="0" cy="-150" r="22" fill="#e7c274" opacity="0.25"/>
+  </g>
+
+  <!-- Testi -->
+  <text x="90" y="250" font-family="Arial, Helvetica, sans-serif" font-size="120" font-weight="800" fill="#f4f5fb">XenoTech<tspan fill="#e7c274">.</tspan></text>
+  <text x="94" y="320" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="600" fill="#c3c7d8">Simone Mansella</text>
+  <text x="94" y="392" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#e7c274">Sviluppo Web &#183; 3D &#183; Automazioni AI</text>
+  <text x="94" y="560" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="500" fill="#9aa0b8">xenotech-landing.vercel.app</text>
+
+  <rect x="90" y="430" width="72" height="4" rx="2" fill="url(#gold)"/>
+</svg>

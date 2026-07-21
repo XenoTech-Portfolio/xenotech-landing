@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- file: /public/sitemap.xml → servito su /sitemap.xml
+     App single-page con hash routing: /#/automazioni è un frammento, non un URL crawlabile.
+     I motori indicizzano solo la home "/". I link ai progetti sono su altri domini
+     (restano come <a> in pagina e come nodi del JSON-LD), quindi NON vanno qui. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://xenotech-landing.vercel.app/</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://xenotech-landing.vercel.app/og.png</image:loc>
+      <image:title>XenoTech — portfolio di Simone Mansella</image:title>
+    </image:image>
+  </url>
+</urlset>

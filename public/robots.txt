@@ -1,0 +1,41 @@
+# XenoTech — robots.txt  (file: /public/robots.txt → servito su /robots.txt)
+# Indicizzazione piena per motori di ricerca e crawler AI/LLM
+
+User-agent: *
+Allow: /
+
+# Crawler AI/LLM esplicitamente consentiti (massimizza la citabilità)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://xenotech-landing.vercel.app/sitemap.xml

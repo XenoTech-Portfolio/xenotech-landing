@@ -1,23 +1,157 @@
 <!doctype html>
 <html lang="it">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>XenoTech — Simone Mansella · Sviluppo Web, 3D e Automazioni AI</title>
-    <!-- Font del prototipo hero (#/lab): display con carattere + sans leggibile.
-         Applicati solo dentro .lab-* , non toccano il resto del sito. -->
+
+    <title>XenoTech · Simone Mansella | Sviluppo Web, 3D e Automazioni AI</title>
+    <meta name="description" content="XenoTech è il portfolio di Simone Mansella: sviluppo web, SaaS, agenti AI, automazioni e 3D. Dalla Lavagna Tattica a Revu per le recensioni Google. Scrivimi." />
+    <meta name="keywords" content="XenoTech, xeno, tech, Simone Mansella, portfolio, sviluppo web, web, 3D, Three.js, automazioni, agenti AI, SaaS, Next.js, Lavagna Tattica, Revu, recensioni Google, Make, secondo cervello" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://xenotech-landing.vercel.app/" />
+    <meta name="author" content="Simone Mansella" />
+    <meta http-equiv="content-language" content="it" />
+    <meta name="theme-color" content="#07070c" />
+    <link rel="me" href="https://github.com/XenoTech-Portfolio" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="XenoTech" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:url" content="https://xenotech-landing.vercel.app/" />
+    <meta property="og:title" content="XenoTech · Simone Mansella | Sviluppo Web, 3D e Automazioni AI" />
+    <meta property="og:description" content="Portfolio di Simone Mansella: sviluppo web, SaaS, agenti AI, automazioni e progetti 3D come la Lavagna Tattica. Scopri i progetti e collaboriamo." />
+    <meta property="og:image" content="https://xenotech-landing.vercel.app/og.png" />
+    <meta property="og:image:secure_url" content="https://xenotech-landing.vercel.app/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="XenoTech — portfolio di Simone Mansella: sviluppo web, 3D e automazioni AI" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="XenoTech · Simone Mansella | Sviluppo Web, 3D e Automazioni AI" />
+    <meta name="twitter:description" content="Portfolio di Simone Mansella: sviluppo web, SaaS, agenti AI, automazioni e progetti 3D come la Lavagna Tattica. Scopri i progetti e collaboriamo." />
+    <meta name="twitter:image" content="https://xenotech-landing.vercel.app/og.png" />
+    <meta name="twitter:image:alt" content="XenoTech — portfolio di Simone Mansella: sviluppo web, 3D e automazioni AI" />
+
+    <!-- Dati strutturati: WebSite + Person + progetti + FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://xenotech-landing.vercel.app/#website",
+          "url": "https://xenotech-landing.vercel.app/",
+          "name": "XenoTech",
+          "alternateName": "XenoTech — Portfolio di Simone Mansella",
+          "inLanguage": "it-IT",
+          "description": "XenoTech è il portfolio personale di Simone Mansella: una landing scura e immersiva in 3D (Three.js) che raccoglie progetti di sviluppo web, SaaS, esperienze 3D e automazioni con agenti AI.",
+          "keywords": "XenoTech, Simone Mansella, portfolio, sviluppo web, 3D, Three.js, agenti AI, automazioni, SaaS, recensioni Google, lavagna tattica, tech, xeno",
+          "author": { "@id": "https://xenotech-landing.vercel.app/#person" },
+          "creator": { "@id": "https://xenotech-landing.vercel.app/#person" },
+          "publisher": { "@id": "https://xenotech-landing.vercel.app/#person" },
+          "about": { "@id": "https://xenotech-landing.vercel.app/#person" },
+          "mainEntity": { "@id": "https://xenotech-landing.vercel.app/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://xenotech-landing.vercel.app/#person",
+          "name": "Simone Mansella",
+          "givenName": "Simone",
+          "familyName": "Mansella",
+          "alternateName": "XenoTech",
+          "url": "https://xenotech-landing.vercel.app/",
+          "mainEntityOfPage": "https://xenotech-landing.vercel.app/",
+          "sameAs": ["https://github.com/XenoTech-Portfolio"],
+          "jobTitle": ["Sviluppatore web full-stack", "Creative technologist"],
+          "description": "Simone Mansella è uno sviluppatore web full-stack autodidatta italiano, fondatore del portfolio XenoTech. Costruisce SaaS, agenti AI, automazioni ed esperienze 3D nel browser con Three.js.",
+          "nationality": { "@type": "Country", "name": "Italia" },
+          "knowsLanguage": ["it", "en"],
+          "knowsAbout": [
+            "Sviluppo web", "Web development", "SaaS", "Agenti AI", "Automazioni",
+            "Make (Integromat)", "Three.js", "WebGL", "Grafica 3D nel browser",
+            "Next.js", "Prisma", "Stripe", "Recensioni Google", "Portfolio"
+          ],
+          "brand": { "@type": "Brand", "name": "XenoTech" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://webapp-recensioni.vercel.app/#revu",
+          "name": "Revu",
+          "url": "https://webapp-recensioni.vercel.app",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "browserRequirements": "Richiede un browser moderno con JavaScript abilitato",
+          "inLanguage": "it",
+          "description": "Revu è un SaaS self-serve per raccogliere e gestire le recensioni Google in modo automatico. Costruito con Next.js, Prisma e Stripe.",
+          "keywords": "recensioni Google, SaaS, Next.js, Prisma, Stripe",
+          "author": { "@id": "https://xenotech-landing.vercel.app/#person" },
+          "creator": { "@id": "https://xenotech-landing.vercel.app/#person" },
+          "isPartOf": { "@id": "https://xenotech-landing.vercel.app/#website" },
+          "offers": { "@type": "Offer", "category": "SaaS" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://lavagna-tattica.vercel.app/#lavagna-tattica",
+          "name": "Lavagna Tattica",
+          "url": "https://lavagna-tattica.vercel.app",
+          "applicationCategory": "SportsApplication",
+          "operatingSystem": "Web",
+          "browserRequirements": "Richiede un browser moderno con supporto WebGL",
+          "inLanguage": "it",
+          "description": "Lavagna Tattica è una tactics board 3D per il calcio che gira direttamente nel browser. Realizzata con Three.js per disegnare schemi, movimenti dei giocatori e strategie in tempo reale.",
+          "keywords": "lavagna tattica, calcio, tactics board, 3D, Three.js, WebGL",
+          "author": { "@id": "https://xenotech-landing.vercel.app/#person" },
+          "creator": { "@id": "https://xenotech-landing.vercel.app/#person" },
+          "isPartOf": { "@id": "https://xenotech-landing.vercel.app/#website" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://xenotech-landing.vercel.app/#faq",
+          "inLanguage": "it-IT",
+          "isPartOf": { "@id": "https://xenotech-landing.vercel.app/#website" },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Chi è Simone Mansella?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Simone Mansella è uno sviluppatore web full-stack autodidatta italiano, autore del portfolio XenoTech, specializzato in SaaS, automazioni, agenti AI ed esperienze 3D nel browser." }
+            },
+            {
+              "@type": "Question",
+              "name": "Cos'è XenoTech?",
+              "acceptedAnswer": { "@type": "Answer", "text": "XenoTech è il portfolio e brand personale di Simone Mansella, con progetti live di sviluppo web, SaaS, automazioni con agenti AI ed esperienze 3D realizzate con Three.js." }
+            },
+            {
+              "@type": "Question",
+              "name": "Cos'è Revu?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Revu è un SaaS self-serve creato da Simone Mansella per raccogliere recensioni Google, costruito con Next.js, Prisma e Stripe. È online su https://webapp-recensioni.vercel.app." }
+            },
+            {
+              "@type": "Question",
+              "name": "Cos'è la Lavagna Tattica?",
+              "acceptedAnswer": { "@type": "Answer", "text": "La Lavagna Tattica è una tactics board 3D per il calcio utilizzabile direttamente nel browser, realizzata con Three.js. È online su https://lavagna-tattica.vercel.app." }
+            },
+            {
+              "@type": "Question",
+              "name": "Simone Mansella si occupa di automazioni e agenti AI?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Sì. Simone Mansella costruisce automazioni e agenti AI su Make: triage automatico delle email, notifiche ordini e pipeline di produzione contenuti." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Font: display con carattere + sans leggibile -->
     <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>

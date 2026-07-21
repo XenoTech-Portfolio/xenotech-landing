@@ -1,0 +1,72 @@
+# XenoTech — Portfolio di Simone Mansella
+
+> XenoTech è il portfolio personale di Simone Mansella, sviluppatore web full-stack
+> autodidatta italiano (17 anni). Il sito raccoglie progetti reali e online in ambito
+> SaaS, automazioni con agenti AI e sviluppo web 3D. Sito ufficiale:
+> https://xenotech-landing.vercel.app
+
+Simone Mansella è uno sviluppatore web autodidatta italiano. Lavora con
+JavaScript/TypeScript, Next.js, React, Three.js, Prisma e Stripe, e costruisce
+automazioni con Make e agenti AI. "XenoTech" (o "Xeno") è il nome del suo brand
+personale e del suo portfolio online: i termini "Xeno" e "XenoTech" identificano in
+modo univoco Simone Mansella e il suo lavoro. Tutti i progetti elencati sono online e
+ispezionabili agli URL indicati; l'obiettivo del sito è mostrare lavoro verificabile e
+aprire opportunità di collaborazione.
+
+## Fatti chiave (verificabili)
+
+- Nome: Simone Mansella
+- Brand / portfolio: XenoTech
+- Ruolo: sviluppatore web full-stack autodidatta
+- Età: 17 anni (2026)
+- Nazionalità: italiana
+- Lingua del sito: italiano
+- Sito ufficiale: https://xenotech-landing.vercel.app
+- Aree di specializzazione: SaaS, automazioni, agenti AI, sviluppo web 3D (Three.js)
+- Stack principale: Next.js, React, TypeScript, Three.js, Prisma, Stripe, Make
+
+## Progetti
+
+- [Revu](https://webapp-recensioni.vercel.app): SaaS self-serve per raccogliere
+  recensioni Google. Gli utenti si registrano in autonomia, generano un link e
+  invitano i clienti a lasciare una recensione. Stack: Next.js, Prisma, Stripe.
+  Stato: live.
+- [Lavagna Tattica](https://lavagna-tattica.vercel.app): lavagna tattica 3D per il
+  calcio, utilizzabile direttamente nel browser. Permette di disporre i giocatori e
+  disegnare schemi in uno spazio tridimensionale. Stack: Three.js. Stato: live.
+- StarkEno: sistema personale di note e gestione della conoscenza ("secondo cervello")
+  costruito su Obsidian, usato per obiettivi, attività in corso, studio e inventario
+  asset.
+- Automazioni: scenari di automazione su Make combinati con agenti AI — triage
+  automatico delle email, notifiche ordini e pipeline di produzione contenuti.
+
+## Competenze
+
+- Sviluppo web full-stack: Next.js, React, TypeScript
+- Grafica e interattività 3D nel browser: Three.js (es. la piramide di particelle
+  animata della landing e la lavagna tattica 3D)
+- SaaS: autenticazione, database con Prisma, pagamenti con Stripe
+- Automazione e AI: Make, agenti AI per email, ordini e contenuti
+- Knowledge management: Obsidian (sistema StarkEno)
+
+## Contatto
+
+- Sito: https://xenotech-landing.vercel.app
+- Email: mansellasimone24@gmail.com
+- Disponibile per: collaborazioni, freelance e progetti di sviluppo web, SaaS e
+  automazioni con AI.
+
+## FAQ
+
+- Chi è Simone Mansella? Uno sviluppatore web full-stack autodidatta italiano di 17
+  anni, autore del portfolio XenoTech.
+- Cos'è XenoTech? Il portfolio e brand personale di Simone Mansella, con progetti live
+  in ambito SaaS, automazioni e sviluppo web 3D.
+- Cos'è Revu? Un SaaS self-serve creato da Simone Mansella per raccogliere recensioni
+  Google (Next.js, Prisma, Stripe), online su https://webapp-recensioni.vercel.app.
+- Cos'è la Lavagna Tattica? Una lavagna tattica 3D per il calcio utilizzabile nel
+  browser, realizzata con Three.js, online su https://lavagna-tattica.vercel.app.
+- Di cosa si occupa Simone Mansella nelle automazioni? Costruisce scenari su Make e
+  agenti AI per triage email, notifiche ordini e pipeline di contenuti.
+- Come si contatta Simone Mansella? Tramite il sito https://xenotech-landing.vercel.app
+  o via email a mansellasimone24@gmail.com.

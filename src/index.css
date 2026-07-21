@@ -1,0 +1,299 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colori originali del logo: inchiostro nero su carta calda, un solo
+       accento oro usato con parsimonia — non più l'arancione come colore
+       dominante ovunque. */
+    --background: 45 33% 96%;
+    --foreground: 30 8% 10%;
+    --card: 45 33% 97%;
+    --card-foreground: 30 8% 10%;
+    --popover: 45 33% 97%;
+    --popover-foreground: 30 8% 10%;
+    --primary: 30 8% 10%;
+    --primary-foreground: 45 33% 97%;
+    --secondary: 44 20% 90%;
+    --secondary-foreground: 30 8% 10%;
+    --muted: 44 20% 90%;
+    --muted-foreground: 30 6% 38%;
+    --accent: 38 55% 43%;
+    --accent-foreground: 45 33% 97%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 12% 80%;
+    --input: 35 12% 80%;
+    --ring: 30 8% 10%;
+    --radius: 0.2rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+:root {
+  --ease-out-snap: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-snap: cubic-bezier(0.77, 0, 0.175, 1);
+  --gold: #b8862b;
+  --ink: #221f1b;
+  --paper: #f5f2ea;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+      "Times New Roman", serif;
+  }
+  .font-mono-label {
+    font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", Consolas,
+      monospace;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+}
+
+/* Sfondo 3D persistente: unica scena dietro a tutta la pagina, decorativa
+   (pointer-events: none) così non interferisce mai con i click sui
+   contenuti reali sopra di essa. */
+.mountain-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.mountain-bg canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* Velo leggero al centro: la scena resta viva ai bordi, il testo al
+   centro pagina ha un fondo più calmo senza bisogno di card opache. */
+.mountain-veil {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 40%,
+    hsl(var(--background) / 0.55) 0%,
+    hsl(var(--background) / 0.15) 55%,
+    transparent 80%
+  );
+}
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pannelli 3D: le card "vere" della pagina. Una base sfalsata dietro dà
+   la sensazione di spessore reale; il fronte ruota con il cursore dentro
+   una prospettiva marcata, con un'ombra che si sposta di conseguenza. */
+.panel3d-wrap {
+  position: relative;
+  perspective: 1400px;
+  height: 100%;
+}
+.panel3d-under {
+  position: absolute;
+  inset: 0;
+  border-radius: 2px;
+  background: var(--ink);
+  transform: translate(7px, 9px) rotate(-1.6deg);
+  opacity: 0.92;
+}
+.panel3d-front {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform, box-shadow;
+  transition: transform 0.22s var(--ease-out-snap), box-shadow 0.22s ease;
+  box-shadow: 0 10px 24px -8px rgba(34, 31, 27, 0.35);
+}
+
+/* Card di contenuto: base carta chiara con testo inchiostro, bordo netto */
+.panel-paper {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+}
+/* Card scura di richiamo (usata per l'unica sezione "vendita",
+   Automazioni): inchiostro pieno, testo carta, filo dorato */
+.panel-ink {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1.5px solid var(--gold);
+}
+.panel-ink .p-muted {
+  color: hsl(45 25% 85%);
+}
+.panel-gold-text {
+  color: var(--gold);
+}
+.panel-chip {
+  border: 1px solid currentColor;
+  opacity: 0.85;
+}
+
+/* Card placeholder ("in arrivo"): tratteggiata, leggera */
+.ghost-card {
+  border: 1.5px dashed hsl(var(--border));
+  background: hsl(var(--background) / 0.7);
+  backdrop-filter: blur(6px);
+  color: hsl(var(--muted-foreground));
+  transition: border-color 0.2s var(--ease-out-snap);
+}
+@media (hover: hover) and (pointer: fine) {
+  .ghost-card:hover {
+    border-color: var(--ink);
+  }
+}
+
+/* Pulsante dorato, usato una sola volta per la call-to-action principale
+   di vendita (Automazioni): l'oro è un accento raro, non una tinta piatta. */
+.btn-gold {
+  background: var(--gold);
+  color: var(--paper);
+  font-weight: 700;
+  border: 1px solid var(--gold);
+  transition: transform 0.15s var(--ease-out-snap), background 0.15s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-gold:hover {
+    background: #a3781f;
+    transform: scale(1.045);
+  }
+}
+.btn-gold:active {
+  transform: scale(0.97);
+}
+.btn-ink-outline {
+  background: transparent;
+  color: var(--paper);
+  font-weight: 700;
+  border: 1px solid hsl(45 25% 85% / 0.6);
+  transition: transform 0.15s var(--ease-out-snap), background 0.15s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-ink-outline:hover {
+    background: hsl(45 25% 85% / 0.12);
+    transform: scale(1.045);
+  }
+}
+.btn-ink-outline:active {
+  transform: scale(0.97);
+}
+
+/* Pagina Automazioni: diagrammi di flusso "come funziona" */
+.flow-scroll {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.flow-node {
+  border: 1.5px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  padding: 8px 12px;
+  min-width: 104px;
+  text-align: center;
+}
+/* Il nodo AI è il cuore dello scenario: inchiostro pieno con filo dorato */
+.flow-node-ai {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--gold);
+}
+.flow-arrow {
+  color: var(--ink);
+  opacity: 0.75;
+}
+.flow-dash {
+  stroke-dasharray: 5 5;
+  animation: flowdash 0.8s linear infinite;
+}
+@keyframes flowdash {
+  to {
+    stroke-dashoffset: -10;
+  }
+}
+.price-old {
+  text-decoration: line-through;
+  opacity: 0.45;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s var(--ease-out-snap), transform 0.7s var(--ease-out-snap);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Ink underline for nav links */
+.ink-link {
+  position: relative;
+}
+.ink-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1.5px;
+  width: 0;
+  background: var(--gold);
+  transition: width 0.25s var(--ease-out-snap);
+}
+@media (hover: hover) and (pointer: fine) {
+  .ink-link:hover::after {
+    width: 100%;
+  }
+}
+/* Sezione attiva durante lo scroll (scroll-spy): stessa sottolineatura
+   dorata dell'hover, ma sempre visibile mentre sei in quella sezione. */
+.ink-link-active::after {
+  width: 100%;
+}
+
+/* Bottoni shadcn: feedback di pressione + leggero ingrandimento al hover */
+.xt-btn {
+  transition: transform 0.15s var(--ease-out-snap), background-color 0.15s ease,
+    color 0.15s ease, border-color 0.15s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .xt-btn:hover {
+    transform: scale(1.045);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .panel3d-front {
+    transition: none;
+  }
+  .ink-link::after {
+    transition: none;
+  }
+  .btn-gold,
+  .btn-ink-outline,
+  .xt-btn {
+    transition: none;
+  }
+  .flow-dash {
+    animation: none;
+  }
+}

@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+# XenoTech
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Portfolio personale di **Simone Mansella** — un laboratorio dove costruisco
+progetti web, esploro l'intelligenza artificiale e documento la salita, un
+passo alla volta. Metafora del sito: *ogni progetto è una vetta*.
 
-Currently, two official plugins are available:
+**Live:** [xenotech-landing.vercel.app](https://xenotech-landing.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Caratteristiche
 
-## React Compiler
+- Sfondo 3D persistente in **Three.js**: la montagna del logo, con uno
+  scalatore animato che percorre il sentiero fino alla vetta e una stella che
+  reagisce ai click e all'hover del progetto in evidenza.
+- Scroll fluido con inerzia (Lenis) e reveal delle sezioni allo scroll.
+- Routing interno via hash: oltre alla home ci sono sottopagine dedicate per
+  i progetti live — `#/revu`, `#/lavagna-tattica` — e `#/automazioni`.
+- Demo live dei progetti embeddate direttamente dalle sottopagine.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the Oxlint configuration
+- [React](https://react.dev) + TypeScript
+- [Three.js](https://threejs.org) per la scena 3D
+- [Vite](https://vite.dev) per build e dev server
+- Tailwind CSS + componenti shadcn/ui
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Sviluppo
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev      # http://localhost:5173
+npm run build    # bundle di produzione in dist/
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

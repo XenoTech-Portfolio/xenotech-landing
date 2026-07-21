@@ -17,8 +17,7 @@ const GITHUB_URL = "https://github.com/XenoTech-Portfolio";
 const INK = "#221f1b";
 const GOLD = "#b8862b"; // unico accento, colori originali del logo
 
-// TODO: aggiornare con gli URL reali dopo il deploy su Vercel
-const REVU_URL = "https://revu.vercel.app";
+const REVU_URL = "https://webapp-recensioni.vercel.app";
 const LAVAGNA_TATTICA_URL = "https://lavagna-tattica.vercel.app";
 
 const prefersReducedMotion = () =>

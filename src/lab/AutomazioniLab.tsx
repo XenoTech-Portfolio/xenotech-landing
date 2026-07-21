@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { AmbientField } from "./AmbientField";
 
-const EMAIL = "mansellasimone24@gmail.com";
+const EMAIL = "xenomistech@gmail.com";
 
 type FlowNode = { label: string; sub?: string; ai?: boolean };
 type Scenario = {

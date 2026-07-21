@@ -52,7 +52,7 @@ aprire opportunità di collaborazione.
 ## Contatto
 
 - Sito: https://xenotech-landing.vercel.app
-- Email: mansellasimone24@gmail.com
+- Email: xenomistech@gmail.com
 - Disponibile per: collaborazioni, freelance e progetti di sviluppo web, SaaS e
   automazioni con AI.
 
@@ -69,4 +69,4 @@ aprire opportunità di collaborazione.
 - Di cosa si occupa Simone Mansella nelle automazioni? Costruisce scenari su Make e
   agenti AI per triage email, notifiche ordini e pipeline di contenuti.
 - Come si contatta Simone Mansella? Tramite il sito https://xenotech-landing.vercel.app
-  o via email a mansellasimone24@gmail.com.
+  o via email a xenomistech@gmail.com.

@@ -5,7 +5,7 @@ import { AmbientField } from "./AmbientField";
 /* Prototipo della NUOVA landing completa (rotta nascosta #/lab).
    Tema scuro immersivo, tutti gli stili scoped in .lab-*. */
 
-const EMAIL = "mansellasimone24@gmail.com";
+const EMAIL = "xenomistech@gmail.com";
 const GITHUB_URL = "https://github.com/XenoTech-Portfolio";
 const REVU_URL = "https://webapp-recensioni.vercel.app";
 const LAVAGNA_TATTICA_URL = "https://lavagna-tattica.vercel.app";

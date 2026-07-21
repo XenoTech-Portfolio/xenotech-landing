@@ -155,6 +155,42 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Contenuto in HTML grezzo per crawler e LLM che non eseguono JavaScript
+         (stessi fatti della pagina renderizzata, nessun cloaking). -->
+    <noscript>
+      <article>
+        <h1>XenoTech — Simone Mansella</h1>
+        <p>
+          XenoTech è il portfolio di <strong>Simone Mansella</strong>, sviluppatore
+          web full-stack autodidatta italiano (17 anni). Costruisce prodotti web,
+          SaaS, esperienze 3D nel browser (Three.js) e automazioni con agenti AI.
+          Contatto: <a href="mailto:mansellasimone24@gmail.com">mansellasimone24@gmail.com</a> ·
+          <a href="https://github.com/XenoTech-Portfolio">GitHub</a>.
+        </p>
+        <h2>Progetti</h2>
+        <ul>
+          <li>
+            <strong>Revu</strong> — SaaS self-serve per raccogliere recensioni Google
+            (Next.js, Prisma, Stripe). Live:
+            <a href="https://webapp-recensioni.vercel.app">webapp-recensioni.vercel.app</a>
+          </li>
+          <li>
+            <strong>Lavagna Tattica</strong> — tactics board 3D per il calcio nel
+            browser, realizzata con Three.js. Live:
+            <a href="https://lavagna-tattica.vercel.app">lavagna-tattica.vercel.app</a>
+          </li>
+          <li>
+            <strong>StarkEno</strong> — sistema di note / secondo cervello (Obsidian).
+          </li>
+          <li>
+            <strong>Automazioni</strong> — scenari Make con agenti AI: triage email,
+            notifiche ordini, pipeline di contenuti.
+          </li>
+        </ul>
+        <h2>Competenze</h2>
+        <p>Sviluppo web (React, Next.js, TypeScript), 3D e WebGL (Three.js), agenti AI e automazioni (Make), SaaS.</p>
+      </article>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

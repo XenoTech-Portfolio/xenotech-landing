@@ -36,9 +36,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: #07070c; /* nuova landing scura: niente flash chiaro */
+    color: #e8e9f0;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
       "Helvetica Neue", Arial, sans-serif;
   }
+  html { background: #07070c; }
 }
 
 :root {
